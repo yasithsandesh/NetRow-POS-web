@@ -18,10 +18,694 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+:root {
+  --primary-dark: #191C24;
+  --primary-light: #FFFDFA;
+  --primary-second: #AF1763;
+  --sucess-color: #0D6EFD;
+  --green-color: #198754;
+  --greenDark-color:#072819;
+  --greenLight-color:#a3cfbb;
+  --blue-color:#0dcaf0;
+  --red-color:#AB2E3C;
+  --yellow-color:#ffc107
+}
+
+
+::placeholder {
+  color: #f8f8ff;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+  height: .5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-second);
+  border-radius: 2px;
+}
+
+
+.mode-dark {
+  background-color: var(--primary-dark);
+
+}
+
+.mode-light {
+  background-color: var(--primary-light);
+
+}
+
+.userBox {
+  background-color: var(--primary-second);
+  padding: 4px;
+  border-radius: 5px;
+  transition-duration: 1s;
+}
+
+.userBox:hover {
+  opacity: 50%;
+}
+
+
+.sideBar-item-box {
+
+
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.sideBar-item-box:hover {
+  background-color: #0f1116;
+}
+
+.sideBar-item-box:focus {
+  background-color: #0f1116;
+}
+
+.mainBox {
+
+  display: flex;
+  align-self: center;
+  height: 75vh;
+  width: 80%;
+  border-radius: 20px;
+  background-color: var(--primary-dark);
+
+}
+
+.mainBox-dashbord {
+
+  display: flex;
+  align-self: center;
+  height: 80vh;
+  width: 80%;
+  border-radius: 20px;
+ 
+
+}
+
+.mainPosBox {
+
+  display: flex;
+  align-self: center;
+  height: 80vh;
+  width: 100%;
+  border-radius: 20px;
+ 
+
+}
+
+.searchInputDiv {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  column-gap: 5px;
+  border-radius: 20px;
+  width: auto;
+  height: 50px;
+  background-color: var(--sucess-color);
+}
+
+.searchInput {
+  width: 10rem;
+  height: 30px;
+  outline: none;
+  background-color: var(--sucess-color);
+}
+
+
+.priceInputDiv {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  column-gap: 5px;
+  border-radius: 20px;
+  width: auto;
+  height: 50px;
+  background-color: var(--green-color);
+}
+
+.priceInput {
+  width: 6rem;
+  height: 30px;
+  outline: none;
+  background-color: var(--green-color);
+}
+
+
+
+
+.tableView {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #30333a;
+  padding: 1rem;
+  border-radius: 20px;
+  row-gap: 1rem;
+  height: 50vh;
+}
+
+.addNew-btn {
+  width: 144px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: var(--sucess-color);
+}
+
+.addCompany-btn {
+  width: 200px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: var(--primary-second);
+}
+
+.table-dark {
+  background-color: #30333a;
+}
+
+.dialog-dark{
+  background-color: var(--primary-dark);
+}
+
+.dialog-light{
+  background-color: var(--primary-light);
+}
+
+
+
+.tableViewGRN {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 20px;
+  row-gap: 1rem;
+  height: 50vh;
+}
+
+.grnInputView {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  background-color: #30333a;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.addGrnBtn{
+  column-gap: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  background-color: var(--primary-second);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.saveGrnBtn{
+  column-gap: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  background-color: var(--sucess-color);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+
+.grnInput {
+  outline: none;
+  background-color: #30333a;
+}
+
+.grnFormAdd-btn {
+  background-color: #222429;
+  border-radius: 50px;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  transition-duration: 0.8s;
+}
+
+.grnFormAdd-btn:hover{
+  background-color: var(--green-color);
+  /* outline-width: 2px;
+  outline-color: #6e7075;
+  outline-style: solid; */
+  cursor: pointer;
+}
+
+.cartGRN{
+  width: 300px;
+  padding: 1rem;
+  border-radius: 20px;
+  background-color: var(--green-color);
+}
+
+.qtyGRN{
+  justify-content: center;
+  border-radius: 30px;
+  padding: 10px;
+ background-color: var(--greenDark-color);
+}
+
+.grn2Col{
+  row-gap: 5px;
+}
+
+.productNameGRN{
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.brandNameGRN{
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.cartItemPrice{
+  border-radius: 10px;
+ padding: 5px;
+  background-color: var(--greenDark-color);
+}
+
+.mainGrnProductCart{
+  column-gap: 1rem;
+  overflow-x: scroll;
+}
+
+
+
+.productCart{
+  width: 200px;
+  padding: 0.5rem;
+  border-radius: 30px;
+ background-color: #30333a;
+ transition-duration: 1s;
+}
+
+.productCart:hover{
+  margin-left: 10px;
+}
+
+.productName{
+ font-size: 30px;
+ color: var(--primary-light);
+  font-weight: 500;
+}
+
+.brandName{
+   color: var(--primary-light);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.cartProctId{
+
+}
+
+.cartBrandId{
+
+}
+
+.addProductIcon{
+  color: var(--green-color);
+  font-size: 30px;
+}
+
+.addProductIcon:hover{
+  cursor: pointer;
+}
+
+.sco{
+  overflow-x: scroll;
+}
+
+.addBarndBtn{
+  border-radius: 20px;
+  color: var(--primary-light);
+  padding: 10px;
+  background-color: var(--sucess-color);
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.addProductBtn{
+  border-radius: 20px;
+  color: var(--primary-light);
+  padding: 10px;
+  background-color: var(--primary-second);
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.main-inputs-view{
+
+  background-color: #30333a;
+  padding: 10px;
+  border-radius: 5px;
+  column-gap: 15px;
+}
+
+.itemView{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 5px;
+}
+
+.itemInput{
+outline: none;
+background-color: #30333a;
+}
+
+.inputDiv{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  background-color: #30333a;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.stockCartView{
+  overflow: scroll;
+  padding: 5rem;
+ 
+}
+
+.stockCart{
+  width: 200px;
+  height: 100px;
+  background-color: var(--green-color);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.invoiceItemsView{
+  display: flex;
+  flex-direction: column;
+  height: 40vh;
+  row-gap: 10px;
+  overflow-y: scroll;
+}
+
+.invoiceItems{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #30333a;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.firstBox{
+  display: flex;
+  flex-direction: row;
+  width: 200px;
+  column-gap: 10px;
+}
+
+.secondView{
+ 
+}
+
+.qtyC{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-light);
+  width: 30px;
+  padding: 2px;
+  border-radius: 20px;
+}
+
+.qty{
+  color: var(--primary-dark);
+  font-weight: bold;
+}
+
+.removeIcon{
+  cursor: pointer;
+  transition-duration: 1s;
+}
+
+.removeIcon:hover{
+  opacity: 30%;
+}
+
+.PayView{
+  background-color: #30333a;
+  height: 60vh;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  row-gap: 1rem;
+}
+
+.cusMobileInput{
+  outline: none;
+  background-color: rgb(var(--background-start-rgb));
+}
+
+.totalPay{
+  display: flex;
+  flex-direction: row;
+  column-gap: 2rem;
+}
+
+.totalPriceText{
+  font-size: 20px;
+  font-weight:  600;
+}
+
+.inputPayView{
+  display: flex;
+  flex-direction: row;
+  column-gap: 2rem;
+}
+
+.inputv{
+  outline: none;
+  background-color: #30333a;
+}
+
+.paymentMethodView{
+  display: flex;
+  flex-direction: row;
+}
+
+.inputmethodView{
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+  cursor: pointer;
+}
+
+.method{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--green-color);
+  padding: 10px;
+  border-radius: 50px;
+  column-gap: 5px;
+}
+
+.printBtn{
+  background-color: var(--primary-dark);
+  width: 200px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.qtyCricle{
+  background-color: var(--primary-dark);
+  padding: 6px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.find-btn{
+  background-color: var(--primary-second);
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition-duration: 1s;
+}
+
+.find-btn:hover{
+  opacity: 50%;
+}
+
+.mainDashBoxDiv{
+  column-gap: 10px;
+  background-color: #30333a;
+  border-radius: 10px;
+  padding: 20px;
+  width: 500px;
+  height: 100px;
+}
+
+.mainDashBoxIcon{
+  padding: 5px;
+  background-color: var(--blue-color);
+}
+
+.priceAndTitle{
+  width: 150px;
+}
+
+.priceAndTitle-title{
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.priceAndTitle-price{
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.dashboardPersionUi-main{
+  background-color: #30333a;
+  padding: 10px;
+  width: 200px;
+  border-radius: 20px;
+  height: 200px;
+}
+
+.dashboardPersionUi-title{
+  font-weight: 500;
+}
+
+.dashboardPersionUi-count-shape{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--green-color);
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+}
+
+.barChart{
+  background-color: #30333a;
+  border-radius: 20px;
+}
+
+.barChartMainView{
+  width: 500px;
+
+}
+
+.shape-stock-product{
+  background-color: var(--sucess-color);
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.main-name-login{
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.background-login-first{
+  background-color: #8E24AA;
+}
+
+.main-login-view{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4e9f7;
+  border-radius: 30px;
+  padding: 50px;
+}
+
+.login-text-view{
+
+}
+
+.login-text{
+  color: #8E24AA;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.input-view{
+  padding: 10px;
+  background-color: #30333a;
+  width: 250px;
+  border-radius: 10px;
+}
+
+.input-m{
+  outline: none;
+  background-color: #30333a;
+  padding-left: 2rem;
+}
+
+.login-btn{
+  background-color: #8E24AA;
+  width: 250px;
+  height: 50px;
+  border-radius: 10px;
+}
+
+.big-main{
+  background-color: var(--primary-dark);
+}
+
+.textarea-email{
+  background-color: var(--primary-light);
+  width: 100%;
+  height: 300px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+  resize: none;
 }
